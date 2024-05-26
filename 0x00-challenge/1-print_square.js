@@ -15,7 +15,7 @@ if (process.argv.length <= 2) {
 
 const size = parseInt(process.argv[2], 10);
 
-if (isNaN(size)) {
+if (isNaN(size) || size <= 0) {
     process.stderr.write("Invalid argument\n");
     process.exit(1);
 }
