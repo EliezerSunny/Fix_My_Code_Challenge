@@ -43,8 +43,10 @@ if __name__ == '__main__':
 
     try:
         number = int(sys.argv[1])
+        if number <= 0:
+            raise ValueError
     except ValueError:
-        print("The provided argument is not a valid number.")
+        print("The provided argument is not a valid positive number.")
         sys.exit(1)
 
     fizzbuzz(number)
